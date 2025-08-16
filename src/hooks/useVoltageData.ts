@@ -11,8 +11,8 @@ export const useVoltageData = (): ApiResponse => {
       setLoading(true);
       setError(null);
       
-      // const response = await axios.get('http://127.0.0.1:5000/data');
-      setData(null);
+      const response = await axios.get('https://h25j8bv46f.execute-api.us-east-1.amazonaws.com/default/test-himanshu');
+      setData(response.data);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to fetch data');
       console.error('Error fetching voltage data:', err);
