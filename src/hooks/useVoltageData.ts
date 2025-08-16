@@ -11,10 +11,8 @@ export const useVoltageData = (): ApiResponse => {
       setLoading(true);
       setError(null);
       
-      const response = await axios.get('http://127.0.0.1:5000/data');
-      setData(response.data);
-      console.log("HERE IS RESP",response.data)
-      console.log(typeof response.data);
+      // const response = await axios.get('http://127.0.0.1:5000/data');
+      setData(null);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to fetch data');
       console.error('Error fetching voltage data:', err);
